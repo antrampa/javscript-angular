@@ -1,0 +1,26 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Page</title>
+  </head>
+  <body>
+    <button onclick="openAngularPopup()">Open Angular Popup</button>
+
+    <script>
+      function openAngularPopup() {
+        const popupWindow = window.open(
+          "angclient/index.html",
+          "_blank",
+          "width=600, height=400, resizable=yes"
+        );
+      }
+
+      function receiveFormData(formData) {
+        // Process the received form data in the opener window
+        console.log("Received form data in the opener window:", formData);
+      }
+    </script>
+  </body>
+</html>
